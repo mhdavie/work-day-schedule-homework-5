@@ -14,6 +14,8 @@ textarea {
 }
 
 .jumbotron {
+  animation: tada;
+  animation-duration: 2s;
   text-align: center;
   background-color: transparent;
   color: black;
