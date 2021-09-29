@@ -5,7 +5,7 @@ $("#currentDay").text(topDate);
 
 //Moment for current time
 
-var currentTime = moment().format('dddd, MMMM, D, h:mm a');
+var currentTime = moment().format("dddd, MMMM, D, h:mm a");
 $("#currentDay").text(topDate);
 
 
@@ -67,9 +67,10 @@ var time5pm = beforeTime.add(1, "h");
 time5pm = time5pm.format('hh:mm A');
 $(".block9").text(time5pm);
 
+
+// wrap everything inside a document. ready 
+
 $(document).ready(function() {
-
-
 
 
 function timeUpdater() {
@@ -78,9 +79,9 @@ function timeUpdater() {
     var momentTime = moment().hours();
     // loop onto the time blocks 
         // jquery each method
-        $('.form-control').each(function() {
+        $('.block').each(function() {
             // compare current time to time block time 
-            var blockTime = parseInt($(this).attr('.class')) 
+            var blockTime = parseInt($(this).attr('id')) 
             if (blockTime < momentTime) {
                 $(this).addClass('past');
             } else if (blockTime === momentTime) {
@@ -100,31 +101,19 @@ timeUpdater();
 var timeUpdate = setInterval(timeUpdater, 15000);
 
 
-// load the already saved local storage info using class and the id associated with the form input
-$('#9 .form-control').val(localStorage.getItem('9'));
-$('#10 .form-control').val(localStorage.getItem('10'));
-$('#11 .form-control').val(localStorage.getItem('11'));
-$('#12 .form-control').val(localStorage.getItem('12'));
-$('#13 .form-control').val(localStorage.getItem('13'));
-$('#14 .form-control').val(localStorage.getItem('14'));
-$('#15 .form-control').val(localStorage.getItem('15'));
-$('#16 .form-control').val(localStorage.getItem('16'));
-$('#17 .form-control').val(localStorage.getItem('17'));
-
-
-
 // Event listener to save to local storage
 $(".saveBtn").click(function () {
     event.preventDefault();
     var formValue = $(this).siblings(".form-control").val();
-    console.log("local storage");
+    console.log("This worked");
     var listItem = $(this).parent().data("id");
 
     localStorage.setItem(listItem, formValue);
 });
 
 
-// wrap everything inside a document. ready
+
+
 
 })
 
