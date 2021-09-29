@@ -108,11 +108,20 @@ $(".saveBtn").click(function () {
     console.log("This worked");
     var listItem = $(this).parent().data("id");
 
-    localStorage.setItem(listItem, formValue);
+    localStorage.setItem("input", formValue);
 });
 
+// set item 
 
-
+var formValue = JSON.parse(localStorage.getItem('#9'));
+var formValue = JSON.parse(localStorage.getItem('#10'));
+var formValue = JSON.parse(localStorage.getItem('#11'));
+var formValue = JSON.parse(localStorage.getItem('#12'));
+var formValue = JSON.parse(localStorage.getItem('#13'));
+var formValue = JSON.parse(localStorage.getItem('#14'));
+var formValue = JSON.parse(localStorage.getItem('#15'));
+var formValue = JSON.parse(localStorage.getItem('#16'));
+var formValue = JSON.parse(localStorage.getItem('#17'));
 
 
 })
