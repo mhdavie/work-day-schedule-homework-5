@@ -9,8 +9,8 @@ This application emphasizes the use of Java Script, Jquery, Bootstrap and Moment
 # links
 
 
-* ['Day-Planner GitHub']()
-* ['Day-Planner GitHub IO']()
+* ['Day-Planner GitHub'](https://github.com/mhdavie/work-day-schedule-homework-5)
+* ['Day-Planner GitHub IO'](https://mhdavie.github.io/work-day-schedule-homework-5/)
 
 ## User Story
 
